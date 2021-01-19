@@ -1,0 +1,4 @@
+why component make?
+like make header as component and use it many times same as function only one differnce is components have 4 files(css,html,spec(test cases),ts(logical part api call, for loop , function declare, properties,component(declare file name ) ))
+Q. whats is component is angular?
+two types to make components- one manually and another by command line:-ng g c userList

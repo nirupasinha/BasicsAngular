@@ -1,0 +1,8 @@
+import Event in angular
+click Event
+keyup Event
+keyup with enter and space
+keydown
+blur
+mouseover and mouseleave
+get values on textbox

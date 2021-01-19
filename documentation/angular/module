@@ -1,0 +1,4 @@
+what is module?
+in angular , a module is a mechanism to group components, directives,pipes and services that are related.
+> app module by default angular give
+> make user module and there include all components related to user like login user , registration user, list of user etc.
