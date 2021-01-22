@@ -2,7 +2,10 @@ import Event in angular
 click Event
 keyup Event
 keyup with enter and space
-keydown
-blur
+keydown:-
+blur:-
 mouseover and mouseleave
-get values on textbox
+get values on textbox:-2way to get values
+get value with value change
+get value with button click
+Q can we use multiple event at time

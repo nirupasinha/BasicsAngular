@@ -1,0 +1,5 @@
+Style Binding in Angular
+- Difference between normal style and style Binding:-
+-Add dynamic style
+-Update style with button click
+-Add conditional style

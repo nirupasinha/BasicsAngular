@@ -8,4 +8,109 @@
 <app-login></app-login>
 <h4>Sign up components in users module</h4>
 <app-singup></app-singup>
+<H1>Event in angular</H1>
 <button (click)="getAlert(21)">{{getName()}}</button>
+<br>
+
+<button (click)="myEvent('this is click event')">Click Me</button>
+<br>
+<input type="text" #box (keyup)="myEvent(box.value)" /><br>
+<input type="text" #box (keyup.enter)="myEvent(box.value)" /><br>
+<input type="text" #box (keyup.space)="myEvent(box.value)" /><br>
+<input type="text" #box (keydown)="myEvent(box.value)" /><br>
+<input type="text" (blur)="myEvent('blur event')" /><br>
+<div (mouseover)="myEvent('mouse in')" style="background-color:rgb(145, 9, 9);color:rgb(241, 233, 233);">Mouse over
+</div><br>
+<div (mouseleave)="myEvent('mouse in')" style="background-color:rgb(145, 9, 9);color:rgb(241, 233, 233);">Mouse leave
+</div>
+<br>
+<h1>Get TextBox value in Angular</h1>
+<!--input type="text" (keyup)="getVal($event.target.value)" /-->
+<br>
+<input type="text" #box />
+<button (click)="getVal(box.value)">Get Value</button>
+<h2>{{currentVal}}</h2>
+<h1>Property Binding in angular</h1>
+<input type="text" [value]="name" /><br>
+<input type="text" value={{name}} /><br>
+<input type="text" [disabled]="disableBOX" [value]="name" /><br>
+<input type="text" disabled={{disableBOX}} value={{name}} /><br>
+<button (click)="enableBOX()">Enable Text BOX</button><br>
+<h1>Conditions in angular</h1>
+<!-- <h1 *ngIf="show else elseBlock">Show</h1> -->
+<!-- <h1 *ngIf="showBoolean=='yes' then ifBlock else elseBlock">Show Boolean</h1>
+<h1 *ngIf="hide">Hide</h1>
+<ng-template #ifBlock>
+    <h1>if blocks</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>else blocks</h1>
+</ng-template> -->
+
+<ng-template [ngIf]="showColor=='red'">
+    <h1>Red Block</h1>
+</ng-template>
+<ng-template [ngIf]="showColor=='green'">
+    <h1>Green Block</h1>
+</ng-template>
+<ng-template [ngIf]="showColor=='blue'">
+    <h1>Blue Block</h1>
+</ng-template>
+
+<h1>Switch Case in Angular </h1>
+<div [ngSwitch]="color">
+    <h2 style="color:red" *ngSwitchCase="'red'"> Red Color</h2>
+    <h2 style="color:blue" *ngSwitchCase="'blue'"> blue Color</h2>
+    <h2 style="color:green" *ngSwitchCase="'green'"> green Color</h2>
+    <h2 style="color:yellow" *ngSwitchCase="'yellow'"> yellow Color</h2>
+</div>
+<h1>For Loop in Angular</h1>
+<h4 *ngFor="let item of data">{{item}}</h4>
+<h4 *ngFor="let item of dataObj">
+    {{item.name}} {{item.age}}
+</h4>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Email</td>
+    </tr>
+    <tr *ngFor="let item of dataObj">
+        <td>{{item.name}} </td>
+        <td>{{item.age}} </td>
+        <td>{{item.email}} </td>
+
+    </tr>
+</table>
+<!-------form in angular -->
+<h1>Simple form in Angular </h1>
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+    <input type="text" ngModel name="username" placeholder="Enter Name" /><br>
+    <input type="text" ngModel name="age" placeholder="Enter Age" /><br>
+    <input type="text" ngModel name="address" placeholder="Enter Address" /><br>
+    <input type="text" ngModel name="email" placeholder="Enter Email" /><br>
+    <input type="number" ngModel name="mobile" placeholder="Enter Number" /><br><br>
+    <input type="password" ngModel name="password" placeholder="Enter password" /><br><br>
+    <button>Get User Value</button><br>
+</form>
+<br>
+<!------ Header And Footer----->
+<h1>Make Header and Footer in Angular</h1>
+<app-header></app-header>
+<app-footer></app-footer>
+<!------Style Binding In Angular ----->
+<h1>Style Binding In Angular</h1>
+<h1 style="color:red">header</h1>
+<h1 [style.color]="'green'">header</h1>
+<h1 [style.background]="'green'">header</h1>
+<h1 [style.color]="colorBinding">Dynamic Style</h1><br>
+<h1 [style.color]="err?'red':'green'">Conditional Style</h1><br>
+<button (click)="updateColor()">Update Color</button>
+
+<!----------->
+<!----------->
+<br>
+<br>
+<input type="text " /><br>
+<input type="text " /><br>
+<input type="text " /><br>
