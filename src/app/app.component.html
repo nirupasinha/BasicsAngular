@@ -107,6 +107,32 @@
 <h1 [style.color]="err?'red':'green'">Conditional Style</h1><br>
 <button (click)="updateColor()">Update Color</button>
 
+<!-------ng-bootstrap in angular ---->
+<h1>Add Bootstrap in Angular 10</h1>
+<p>
+    <ngb-alert [dismissible]="false">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+</p>
+<p *ngFor="let alert of alerts">
+    <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+</p>
+<p>
+    <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+</p>
+<div class="btn-group btn-group-toggle">
+    <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+    </label>
+    <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+    </label>
+</div>
+<hr>
+
 <!----------->
 <!----------->
 <br>

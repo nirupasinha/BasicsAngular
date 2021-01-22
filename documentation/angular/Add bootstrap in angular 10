@@ -1,6 +1,7 @@
 Add bootstrap in angular 10
 ( and it also work in 9 but below 9 and above 10  it will not work)
 - Run command for install bootstrap (ng add @ng-bootstrap/ng-bootstrap)
+-go to angular bootstrap.github.io
 - Try with some bootstrap examples
 - We check and use code from official website of ng -bootstrap
 - ng add @ng-bootstrap/ng-bootstrap 

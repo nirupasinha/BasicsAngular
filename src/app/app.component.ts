@@ -1,6 +1,37 @@
 import { Component } from '@angular/core';
-import { ArgumentOutOfRangeError } from 'rxjs';
 
+
+interface Alert {
+  type: string;
+  message: string;
+}
+
+const ALERTS: Alert[] = [{
+    type: 'success',
+    message: 'This is an success alert',
+  }, {
+    type: 'info',
+    message: 'This is an info alert',
+  }, {
+    type: 'warning',
+    message: 'This is a warning alert',
+  }, {
+    type: 'danger',
+    message: 'This is a danger alert',
+  }, {
+    type: 'primary',
+    message: 'This is a primary alert',
+  }, {
+    type: 'secondary',
+    message: 'This is a secondary alert',
+  }, {
+    type: 'light',
+    message: 'This is a light alert',
+  }, {
+    type: 'dark',
+    message: 'This is a dark alert',
+  }
+];
 
 @Component({
   selector: 'app-root',//component name->external html file in body(access in body of root html file )
@@ -9,7 +40,7 @@ import { ArgumentOutOfRangeError } from 'rxjs';
 })
 export class AppComponent {
   title = 'SMS';
-  name="nirupa sinha"
+  name="nirupa sinha";
   getName(){
    return this.name;
    // return "nirupa";
@@ -79,4 +110,23 @@ this.disableBOX=false;
     this.colorBinding="blue"
   };
   err=false;
+  alerts: Alert[]=[];
+
+  constructor() {
+    this.reset();
+  }
+
+  close(alert: Alert) {
+    this.alerts.splice(this.alerts.indexOf(alert), 1);
+  }
+
+  reset() {
+    this.alerts = Array.from(ALERTS);
+  }
+  model = {
+    left: true,
+    middle: false,
+    right: false
+  };
+
 }
