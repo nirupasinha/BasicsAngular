@@ -128,5 +128,9 @@ this.disableBOX=false;
     middle: false,
     right: false
   };
-
+/* usersData="nirupa sinha"; */
+usersData={
+  name:'nirupa',
+  age:'26'
+}
 }

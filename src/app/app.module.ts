@@ -12,12 +12,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations' ;
 import {MatButtonModule} from '@angular/material/button';
 import {MatSliderModule} from '@angular/material/slider';
+import { UserComponent } from './user/user.component';
 @NgModule({//ngModule is called directives
   declarations: [//components declaration
     AppComponent,
     UserListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent
     
     //if we remove the declaration then it will not affect when we try to use or import module to another module it will take error
   ],
