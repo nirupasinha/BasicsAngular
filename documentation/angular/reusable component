@@ -1,0 +1,5 @@
+Reusable component in angular
+- Make a user component
+- Use it inside app component as child
+- pass data from parent to child
+- use for loop and result child component

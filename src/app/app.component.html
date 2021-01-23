@@ -144,8 +144,21 @@
 
 <!------- pass data parent to child component in angular---->
 <p>Pass Data Parent To Child Component in angular</p>
-<app-user [hero]="usersData"></app-user>
-
+<!-- <app-user [hero]="usersData"></app-user> -->
+<h1>Reusable component in angular</h1>
+<!-- <app-user [hero]="usersData"></app-user> -->
+<!-- <div *ngFor="let data of usersData">
+    <app-user [hero]="data"></app-user>
+</div> -->
+<h1>
+    Send data Child to parent component in angular
+</h1>
+<app-user (parentComponent)="parentComponent($event)"></app-user>
+<br>
+<br>
+<br>
+<br>
+<h3>{{name}}</h3>
 <!----------->
 <!----------->
 <!----------->

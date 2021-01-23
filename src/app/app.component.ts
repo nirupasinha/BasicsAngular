@@ -77,7 +77,7 @@ this.disableBOX=false;
   showColor="red";
   color='red';
   //For Loop
-  data=["Nirupa", "Sinha","rishi","ved","Sarvottam"]
+   data=["Nirupa", "Sinha","rishi","ved","Sarvottam"] 
   dataObj=[
     {
       name:'Nirupa',
@@ -129,8 +129,28 @@ this.disableBOX=false;
     right: false
   };
 /* usersData="nirupa sinha"; */
-usersData={
+usersData=[
+  {
   name:'nirupa',
-  age:'26'
+  age:'26',
+  address:'ope'
+},
+{
+  name:'rishi',
+  age:'29',
+  address:'mumbai'
+},
+{
+  name:'rishi',
+  age:'23',
+  address:'pune'
+}
+]
+//22.Send data Child to parent component in angular
+name="";
+parentComponent(data:any){
+console.log(data);
+this.name=data.name;
+
 }
 }

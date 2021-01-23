@@ -1,0 +1,4 @@
+Send data Child to parent component in angular
+- make a user component
+- use it inside app component as Child
+- pass data from child to parent with EventEmitter
